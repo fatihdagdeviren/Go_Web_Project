@@ -1,0 +1,21 @@
+{{define "homeindex"}}
+{{template "header" }}
+
+
+<div class="main">
+
+    {{/*    {{.Soyleyen}} der ki : <strong>"{{.Cumle}}"</strong>*/}}
+    {{ range $anahtar, $deger := . }}
+        {{ $anahtar }} : {{ $deger.Soyleyen }} : {{ $deger.Cumle }} <br>
+    {{end}}
+
+    <a href="/gizli"> Gizli link erişim icin buraya tiklayiniz. </a><br/>
+    <a href="/user"> Kullanici Listesi Tıklayınız. </a>
+
+
+</div>
+
+
+
+{{template "footer" }}
+{{end}}

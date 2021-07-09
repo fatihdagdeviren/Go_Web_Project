@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+
+<div class="container">
+    <h2>Vertical (basic) form</h2>
+    <form action="/gizli" method="post">
+        {{ range $anahtar, $deger := . }}
+
+            <div class="row">
+                <div class="col-sm-2">{{ $anahtar }}</div>
+                <div class="col-sm-2">{{ $deger.Soyleyen }}</div>
+                <div class="col-sm-2">{{ $deger.Cumle }}</div>
+
+            </div>
+            <div class="row">
+                <input type="text" name="postEdilecekData1" id="postEdilecekData1">
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+
+
+
+        {{end}}
+    </form>
+</div>
+
+
+</body>
+</html>

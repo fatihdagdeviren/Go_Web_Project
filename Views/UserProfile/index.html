@@ -1,0 +1,24 @@
+{{define "userprofileindex"}}
+{{template "header"}}
+        <div class="main">
+            <form action="/UserProfileSave" method="post">
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" value="{{ .Email }}">
+                </div>
+                <div class="form-group">
+                    <label for="phn">PhoneNumber:</label>
+                    <input type="text" class="form-control" placeholder="Enter Phone Number" id="phn" name="phoneNumber" value="{{ .PhoneNumber }}">
+                </div>
+                <div class="form-group">
+                    <label for="dsc">Description:</label>
+                    <input type="text" class="form-control" placeholder="Enter Description" id="dsc" name="description" value="{{ .Description }}">
+                </div>
+                <div class="form-group">
+                 <a href="/user"> Kullanici Listesi Tıklayınız. </a><br/>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+{{template "footer"}}
+{{end}}
